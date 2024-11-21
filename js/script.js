@@ -4,15 +4,27 @@
 // console.log(offBulb.src);
 // offBulb.src = pathImage;
 
-// fase di preparazione
+// preparazione
 const button = document.getElementById('switch')
 console.log(button.innerHTML);
-
-const bulbWhite = document.getElementById('bulbOff');
-console.log(bulbWhite.querySelector('img'));
 
 const bulbYellow = document.getElementById('bulbOn');
 console.log(bulbYellow.querySelector('img'));
 
+const bulbWhite = document.getElementById('bulbOff');
+console.log(bulbWhite.querySelector('img'));
 
-// const bulbSwitch = ()
+
+
+// elaborazione
+
+button.addEventListener('click', () => {
+  bulbYellow.classList.toggle('d-block');
+  bulbWhite.classList.toggle('d-none');
+  button.innerHTML = bulbYellow.classList.contains('d-block') ? 'Spegni' : 'Accendi';
+})
+
+
+
+
+

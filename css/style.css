@@ -16,8 +16,8 @@
   font-family: sans-serif;
 }
 
-.bulb-align {
-  text-align: center;
+#bulbOn img {
+  transform: scaleX(-1);
 }
 
 .d-none {
@@ -26,4 +26,21 @@
 
 .d-block {
   display: block;
+}
+
+.container {
+  position: relative;
+}
+
+.container #bulbOff,
+#bulbOn {
+  position: absolute;
+  top: 3;
+  left: 40%;
+}
+
+.container #switch {
+  position: absolute;
+  top: 3;
+  left: 60%;
 }
